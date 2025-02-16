@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rock-Paper-Scissors Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="emoji-buttons">
+     
+      <button onclick="play('rock')" class="game-btn">✊<br>Rock</button>
+      <button onclick="play('paper')" class="game-btn">✋<br>Paper</button>
+      <button onclick="play('scissors')" class="game-btn">✌️<br>Scissors</button>
+    </div>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function play(userChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const emojis = {
+        rock: "✊",
+        paper: "✋",
+        scissors: "✌️"
+      };
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+      
+      let result = "";
+      if (userChoice === computerChoice) {
+        result = "It's a tie!";
+      } else if (
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        result = "You win! 🎉";
+      } else {
+        result = "You lose! 😢";
+      }
+      
+      document.getElementById('result').innerHTML = `
+        <p>You chose: ${emojis[userChoice]} (${userChoice})</p>
+        <p>Computer chose: ${emojis[computerChoice]} (${computerChoice})</p>
+        <h2>${result}</h2>
+      `;
+    }
+  </script>
+</body>
+</html>
