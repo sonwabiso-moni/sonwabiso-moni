@@ -1,7 +1,5 @@
 ## Hi there 👋
 
-<!--
-**sonwabiso-moni/sonwabiso-moni** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 # Rock-Paper-Scissors Game
 
@@ -19,5 +17,3 @@ A simple Rock-Paper-Scissors game built with HTML, CSS, and JavaScript. This pro
 **Step 2: Navigate to the Project Directory-cd rock-paper-scissors
 **Locate the index.html file in the rock-paper-scissors folder.
 
-
--->
